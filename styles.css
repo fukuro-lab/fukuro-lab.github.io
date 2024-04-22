@@ -29,7 +29,7 @@ header h1, header h1 .logo {
 header h1 .logo {
     width: 50px;
     height: auto;
-    margin-right: 0;
+    margin-right: 10px;
 }
 
 /* Title */
@@ -39,7 +39,7 @@ h1 {
 }
 
 h2 {
-    font-size: 72px;
+    font-size: 60px; /* Reduced font size for larger screens */
     margin-bottom: 0;
 }
 
@@ -52,10 +52,25 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 0 5%; /* Default padding for smaller screens */
 }
 
 /* Paragraph */
 p {
-    font-size: 20px;
-    padding: 0 50px;
+    font-size: 16px; /* Default font size for smaller screens */
+    padding: 0 5%;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    main {
+        padding: 0 10%; /* Increased padding for larger screens */
+    }
+    p {
+        font-size: 18px; /* Slightly increased font size for better readability on larger screens */
+        padding: 0 10%;
+    }
+    h2 {
+        font-size: 72px; /* Reduced font size for headlines on larger screens */
+    }
 }
